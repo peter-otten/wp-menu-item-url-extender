@@ -33,9 +33,9 @@ class AdminMenu {
 
 	public function enqueue_script() {
 		$scriptSource =  plugin_dir_url(__FILE__) . 'js/po-wp-menu-item-url.js';
-		wp_enqueue_script('PO_wp_menu_item_url',  $scriptSource, ['jquery'], null, 'all' );
+		$distPath = sprintf('%s/js/', __DIR__);
+		wp_enqueue_script('PO_wp_menu_item_url',  $scriptSource, ['jquery'], filemtime($distPath . $scriptSource), 'all' );
 	}
-
 }
 
 // Init the class on priority 0 to avoid adding priority inside the class as default = 10

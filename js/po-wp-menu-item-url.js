@@ -12,8 +12,7 @@ function addLabels() {
             if(typeof menuUrl != 'undefined'){
                 menuUrl = menuUrl.replace(/^https?\:\/\//i, "");
                 var urlParts = menuUrl.split('/');
-                console.log(urlParts[0]);
-                if(urlParts[0].match('/(.*\.local|localhost)/')){
+                if(urlParts[0].match(/(.*\.local|localhost)/g)){
                     urlParts.splice(0,1);
                 }
                 menuUrl = urlParts.join('/');
