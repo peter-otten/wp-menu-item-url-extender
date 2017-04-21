@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) OR exit;
 Plugin Name: Wordpress menu item url extender
 Plugin URI:  https://github.com/rexxnar/wp-menu-item-url
 Description: Plugin voor het tonen van de url bij menu items in wordpress
-Version:     0.0.1
+Version:     1.0.0
 Author:      Peter Otten
 Author URI:  https://www.peterotten.com
 */
@@ -32,9 +32,9 @@ class AdminMenu {
 	}
 
 	public function enqueue_script() {
-		$scriptSource =  plugin_dir_url(__FILE__) . 'js/po-wp-menu-item-url.js';
+		$scriptSource =  plugin_dir_url(__FILE__) . 'js/po-menu-item-url-extender.js';
 		$distPath = sprintf('%s/js/', __DIR__);
-		wp_enqueue_script('PO_wp_menu_item_url',  $scriptSource, ['jquery'], filemtime($distPath . $scriptSource), 'all' );
+		wp_enqueue_script('PO_wp_menu_item_url_extender',  $scriptSource, ['jquery'], filemtime($distPath . $scriptSource), 'all' );
 	}
 }
 

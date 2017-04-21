@@ -12,6 +12,9 @@ function addLabels() {
             if(typeof menuUrl != 'undefined'){
                 menuUrl = menuUrl.replace(/^https?\:\/\//i, "");
                 var urlParts = menuUrl.split('/');
+                urlParts = urlParts.filter( function(item) {
+                    return item !== ''
+                });
                 if(urlParts[0].match(/(.*\.local|localhost)/g)){
                     urlParts.splice(0,1);
                 }
