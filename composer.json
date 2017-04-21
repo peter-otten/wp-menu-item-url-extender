@@ -1,0 +1,21 @@
+{
+  "name": "po/wp-menu-item-url-extender",
+  "description": "Plugin to show the corresponding url for the menu items in Wordpress",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Peter Otten",
+      "homepage": "https://www.peterotten.nl",
+      "role": "Author"
+    }
+  ],
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  }
+}

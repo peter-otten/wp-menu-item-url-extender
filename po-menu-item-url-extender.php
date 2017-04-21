@@ -3,7 +3,7 @@ defined( 'ABSPATH' ) OR exit;
 /*
 Plugin Name: Wordpress menu item url extender
 Plugin URI:  https://github.com/rexxnar/wp-menu-item-url
-Description: Plugin voor het tonen van de url bij menu items in wordpress
+Description: Plugin to show the corresponding url for the menu items in Wordpress
 Version:     1.0.0
 Author:      Peter Otten
 Author URI:  https://www.peterotten.com
